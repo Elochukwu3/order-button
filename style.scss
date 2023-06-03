@@ -3,130 +3,129 @@
     @content;
   }
 }
-main{
-    min-height: 100vh;
-    background: grey;
-    
+main {
+  min-height: 100vh;
+  background: grey;
 
-    section {
-        display: none;
-        justify-content: center;
-        margin: 0;
-        padding: 10px;
-        .container {
-            display: flex;
-            margin: auto 0;   
-            flex-direction: column;
-            
-            .car-cont {
-                display: flex;
-                align-items: end;
-                margin-bottom: 6.5px;
-                border-bottom: 5px solid black;
-                border-radius: 2px;
-      width: 185px;
-      animation-delay: 2s;
-      animation:  4s linear ;
-      @keyframes move {
-          0%{
-              transform: translateX(0);
-            }
-            25%{
-                transform: translateX(0px);
-            }
-            50%{
-                transform: translateX(50px);
-            }
-            75%{
-                transform: translateX(0);
-            }
-            
-            100%{
-                transform: translateX(190px);
-            }
+  section {
+    display: none;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+    .container {
+      display: flex;
+      margin: auto 0;
+      flex-direction: column;
+
+      .car-cont {
+        display: flex;
+        align-items: end;
+        margin-bottom: 6.5px;
+        border-bottom: 5px solid black;
+        border-radius: 2px;
+        width: 185px;
+        animation-delay: 2s;
+        animation: 4s linear;
+        @keyframes move {
+          0% {
+            transform: translateX(0);
+          }
+          25% {
+            transform: translateX(0px);
+          }
+          50% {
+            transform: translateX(50px);
+          }
+          75% {
+            transform: translateX(0);
+          }
+
+          100% {
+            transform: translateX(190px);
+          }
         }
         .car {
-            height: 70px;
-            display: flex;
-        .car-back {
+          height: 70px;
+          display: flex;
+          .car-back {
             width: 35px;
             height: 100%;
             transform: translateX(2px);
             background-color: #362a89;
-            box-shadow: inset 5px 5px 100px #2d2460, inset -5px -5px 100px #2d2460;
+            box-shadow: inset 5px 5px 100px #2d2460,
+              inset -5px -5px 100px #2d2460;
             display: flex;
             align-items: end;
             position: relative;
             z-index: 10;
             &::after {
-                content: "";
-                width: 20px;
-                height: 20px;
-                background-color: rgb(5, 2, 41);
-                position: absolute;
-                bottom: -11px;
-                border-radius: 50%;
-                right: -3px;
+              content: "";
+              width: 20px;
+              height: 20px;
+              background-color: rgb(5, 2, 41);
+              position: absolute;
+              bottom: -11px;
+              border-radius: 50%;
+              right: -3px;
             }
             .box {
-                margin-left: auto;
-            display: block;
-            background-color: #dcb97a;
-            width: 22px;
-            height: 25px;
-            border-radius: 2px;
-            transform: translateX(-100px);
-            z-index: 20;
-        }
-        .box.in{
-            transition-delay: 1s;
-            transition: 1s , tranform;
-            transform: translateX(4px);
-            background-color: red;
-        }
-    }
-        .car-middle {
+              margin-left: auto;
+              display: block;
+              background-color: #dcb97a;
+              width: 22px;
+              height: 25px;
+              border-radius: 2px;
+              transform: translateX(-100px);
+              z-index: 20;
+            }
+            .box.in {
+              transition-delay: 1s;
+              transition: 1s, tranform;
+              transform: translateX(4px);
+            }
+          }
+          .car-middle {
             width: 100px;
             height: 70px;
             background: #6d58ff;
             position: relative;
             z-index: 40;
             // &::before{
-                //     content: '';
-                //     position: absolute;
-                //     top: 0;
-                //     right: -9px;
-                //     z-index: 30;
-                //     width: 0;
-                //     height: 0;
-                //     background-color: #6D58ff;
-                //     border-top: 70px solid #6D58ff;
-                //     border-bottom: 0px solid #6D58ff;
-                //     border-right: 20px solid #6D58ff ;
-                //     transform: skew(15deg);
-                // }
-                &::after {
-            content: "";
-            width: 20px;
-            height: 20px;
-            // background-color: ;
-            background-image: linear-gradient(
+            //     content: '';
+            //     position: absolute;
+            //     top: 0;
+            //     right: -9px;
+            //     z-index: 30;
+            //     width: 0;
+            //     height: 0;
+            //     background-color: #6D58ff;
+            //     border-top: 70px solid #6D58ff;
+            //     border-bottom: 0px solid #6D58ff;
+            //     border-right: 20px solid #6D58ff ;
+            //     transform: skew(15deg);
+            // }
+            &::after {
+              content: "";
+              width: 20px;
+              height: 20px;
+              // background-color: ;
+              background-image: linear-gradient(
                 to bottom,
-              #6d58ff 40%,
-              #050229 50%
+                #6d58ff 40%,
+                #050229 50%
               );
               position: absolute;
-            bottom: -11px;
-            border-radius: 50%;
-            right: -3px;
-            z-index: 10;
+              bottom: -11px;
+              border-radius: 50%;
+              right: -3px;
+              z-index: 10;
+            }
+            //   .tire {
+
+            //   }
           }
-        //   .tire {
-            
-        //   }
         }
-    }
-      .tire {
+        .tire {
           width: 20px;
           height: 20px;
           background-color: rgb(5, 2, 41);
@@ -138,36 +137,35 @@ main{
           justify-content: center;
           align-items: center;
           &::before {
-              position: absolute;
-              content: "";
-              width: 4px;
-              height: 4px;
-              background-color: white;
-              border-radius: 50%;
-            }
-            span {
-                width: 14px;
-                height: 14px;
-                background-color: #404660;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                
-            }
-    }
-    .car-front {
-        width: 28px;
-        height: 50px;
-        background-color: #a6accd;
-        border-radius: 0px 10px 0 0;
-        // margin-left: auto;
-        position: relative;
-        .tire{
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 4px;
+            background-color: white;
+            border-radius: 50%;
+          }
+          span {
+            width: 14px;
+            height: 14px;
+            background-color: #404660;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+          }
+        }
+        .car-front {
+          width: 28px;
+          height: 50px;
+          background-color: #a6accd;
+          border-radius: 0px 10px 0 0;
+          // margin-left: auto;
+          position: relative;
+          .tire {
             z-index: 40;
             left: 40%;
-        }
-        p{
+          }
+          p {
             position: absolute;
             top: -10px;
             z-index: 30;
@@ -177,8 +175,8 @@ main{
             border-bottom: 15px solid #283044;
             border-left: 0px solid transparent;
             border-right: 5px solid transparent;
-        }
-        &::before {
+          }
+          &::before {
             content: "";
             position: absolute;
             top: 0;
@@ -187,22 +185,20 @@ main{
             width: 10px;
             height: 50px;
             background-color: #404660;
-            transform: 
-            skew(5deg);
-        }
-        &::after {
+            transform: skew(5deg);
+          }
+          &::after {
             content: "";
             position: absolute;
-          top: 0;
-          right: -3px;
-          z-index: 30;
-          width: 10px;
-          height: 24px;
-          background-color: #a6accd;
-          transform: 
-          skew(20deg);
-        }
-        .span{
+            top: 0;
+            right: -3px;
+            z-index: 30;
+            width: 10px;
+            height: 24px;
+            background-color: #a6accd;
+            transform: skew(20deg);
+          }
+          .span {
             display: block;
             width: 30px;
             height: 26px;
@@ -210,39 +206,37 @@ main{
             background-color: #a6accd;
             bottom: 0;
             right: -20px;
-            border-radius:  0px 15px 0 0px;
+            border-radius: 0px 15px 0 0px;
             z-index: 10;
             // position: relative;
-            &::before{
-                content: '';
-                width: 4px;
-                height: 20px;
-                position: absolute;
-                background-color: #a6accd;
-                border-radius: 20px 0px 0px 20px;
-                top: -6px;
-                right: 6px;
-                transform: rotateZ(130deg);
-                z-index: 20;
+            &::before {
+              content: "";
+              width: 4px;
+              height: 20px;
+              position: absolute;
+              background-color: #a6accd;
+              border-radius: 20px 0px 0px 20px;
+              top: -6px;
+              right: 6px;
+              transform: rotateZ(130deg);
+              z-index: 20;
             }
-            &::after{
-                content: '';
-                width: 8px;
-                height: 5px;
-                position: absolute;
-                right: 0;
-                background-color: #fff881;
-                z-index: 20;
-                bottom: 20%;
+            &::after {
+              content: "";
+              width: 8px;
+              height: 5px;
+              position: absolute;
+              right: 0;
+              background-color: #fff881;
+              z-index: 20;
+              bottom: 20%;
             }
-            
+          }
         }
+      }
     }
-}
-
-}
-}
-button{
+  }
+  button {
     width: 200px;
     height: 50px;
     background-color: #050229;
@@ -256,20 +250,19 @@ button{
     cursor: pointer;
     text-transform: capitalize;
     transition: 1s;
-    .line-inner{
-        width: 0%;
-        height: 100%;
-        transition: 2s;
-        background-color: #404660;
-      }
-}
+    .line-inner {
+      width: 0%;
+      height: 100%;
+      transition: 2s;
+      background-color: #404660;
+    }
+  }
 
-button.line {
-  width: 350px;
-  height: 8px;
-  padding: 0;
-  background-color: #646bbc;
-  border-radius: 0;
-  
-}
+  button.line {
+    width: 350px;
+    height: 8px;
+    padding: 0;
+    background-color: #646bbc;
+    border-radius: 0;
+  }
 }

@@ -99,8 +99,8 @@ main section .container .car-cont .car .car-back {
   -webkit-transform: translateX(2px);
           transform: translateX(2px);
   background-color: #362a89;
-  -webkit-box-shadow: inset 5px 5px 100px #2d2460, inset -5px -5px 100px #2d2460;
-          box-shadow: inset 5px 5px 100px #2d2460, inset -5px -5px 100px #2d2460;
+  -webkit-box-shadow: inset 5px 5px 100px #2d2460, inset -5px -5px 100px #2d2460;
+          box-shadow: inset 5px 5px 100px #2d2460, inset -5px -5px 100px #2d2460;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,11 +137,10 @@ main section .container .car-cont .car .car-back .box {
 main section .container .car-cont .car .car-back .box.in {
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
-  -webkit-transition: 1s , tranform;
-  transition: 1s , tranform;
+  -webkit-transition: 1s, tranform;
+  transition: 1s, tranform;
   -webkit-transform: translateX(4px);
           transform: translateX(4px);
-  background-color: red;
 }
 
 main section .container .car-cont .car .car-middle {
@@ -273,7 +272,7 @@ main section .container .car-cont .car-front .span {
 }
 
 main section .container .car-cont .car-front .span::before {
-  content: '';
+  content: "";
   width: 4px;
   height: 20px;
   position: absolute;
@@ -287,7 +286,7 @@ main section .container .car-cont .car-front .span::before {
 }
 
 main section .container .car-cont .car-front .span::after {
-  content: '';
+  content: "";
   width: 8px;
   height: 5px;
   position: absolute;
