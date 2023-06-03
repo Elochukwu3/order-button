@@ -1,6 +1,7 @@
 main {
   min-height: 100vh;
   background: grey;
+  overflow: hidden;
 }
 
 main section {
@@ -8,19 +9,31 @@ main section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 0;
   padding: 10px;
+  max-width: 1300px;
+  width: 1000px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 760px) {
+  main section {
+    width: 100%;
+  }
 }
 
 main section .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: auto 0;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 760px) {
+  main section .container {
+    width: 100%;
+  }
 }
 
 main section .container .car-cont {
@@ -323,7 +336,7 @@ main button .line-inner {
 }
 
 main .btn1.line {
-  width: 350px;
+  width: 50%;
   height: 8px;
   padding: 0;
   background-color: #646bbc;

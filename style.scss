@@ -6,17 +6,26 @@
 main {
   min-height: 100vh;
   background: grey;
+  overflow: hidden;
 
   section {
     display: none;
     justify-content: center;
-    margin: 0;
     padding: 10px;
+    max-width: 1300px;
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+    @include tablet(){
+        width: 100%;
+    }
     .container {
       display: flex;
-      margin: auto 0;
-      flex-direction: column;
-
+    width: 60%;
+    @include tablet(){
+        width: 100%;
+    }
+        margin: 0 auto;
       .car-cont {
         display: flex;
         align-items: end;
@@ -260,7 +269,7 @@ main {
   }
 
   .btn1.line {
-    width: 350px;
+    width: 50%;
     height: 8px;
     padding: 0;
     background-color: #646bbc;

@@ -22,27 +22,19 @@ btn.addEventListener("click", () => {
   let progressValue = 0;
   let interval = setInterval(moving, 100);
 
-  
-  // progress()
   setTimeout(() => {
-    clearInterval(interval); // Clear the interval after 7 seconds
-    // Add your code to hide the section, show btnClose, etc.
+    clearInterval(interval); 
     section.style.display = "none";
     btnClose.style.display = "flex";
     btn.style.display = "none";
-  }, 100);
+  }, 6500);
 
   function moving() {
     if (progressValue >= 100) {
       clearInterval(interval);
-      // alert("full")
-      // section.style.display = "none";
-      // btnClose.style.display= "flex"
-      // btn.style.display="none"
     } else {
       progressValue += 10;
       progressDiv.style.width = `${progressValue}%`;
     }
-    console.log(progressValue);
   }
 });
