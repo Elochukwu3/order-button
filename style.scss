@@ -245,7 +245,6 @@ main{
 button{
     width: 200px;
     height: 50px;
-    // padding: 15px 2px;
     background-color: #050229;
     margin: 0 auto;
     display: block;
@@ -268,8 +267,8 @@ button{
 button.line {
   width: 350px;
   height: 8px;
-  // background-color: #6a6bbc;
-  background-color: #404660;
+  padding: 0;
+  background-color: #646bbc;
   border-radius: 0;
   
 }

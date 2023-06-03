@@ -325,7 +325,8 @@ main button .line-inner {
 main button.line {
   width: 350px;
   height: 8px;
-  background-color: #404660;
+  padding: 0;
+  background-color: #646bbc;
   border-radius: 0;
 }
 /*# sourceMappingURL=style.css.map */
