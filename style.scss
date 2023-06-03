@@ -249,6 +249,7 @@ main {
     font-size: 15px;
     cursor: pointer;
     text-transform: capitalize;
+    font-weight: 700;
     transition: 1s;
     .line-inner {
       width: 0%;
@@ -258,11 +259,50 @@ main {
     }
   }
 
-  button.line {
+  .btn1.line {
     width: 350px;
     height: 8px;
     padding: 0;
     background-color: #646bbc;
     border-radius: 0;
+  }
+  .btn2{
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    
+    .tick{
+        display: block;
+        width: 30px;
+        height: 30px;
+        // border:  2px solid red;
+        // border-radius: 50%;
+        position: relative;
+        // background-color: green;
+        &::after, &::before{
+            content: '';
+            position: absolute;
+            background-color: #16bf78;
+            transition: all 0.3s ease;
+            width: 5px;
+
+        }
+        &::before{
+            height: 14px;
+            bottom: 9%;
+            left: 10%;
+            transform-origin: bottom left;
+            transform: rotate(-45deg);
+        }
+        &::after{
+           
+            height: 30px;
+            top: -16%;
+            left: 0px;
+            transform-origin: bottom right;
+            transform: rotate(45deg);
+        }
+    }
+    
   }
 }

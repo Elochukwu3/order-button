@@ -309,6 +309,7 @@ main button {
   font-size: 15px;
   cursor: pointer;
   text-transform: capitalize;
+  font-weight: 700;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -321,11 +322,56 @@ main button .line-inner {
   background-color: #404660;
 }
 
-main button.line {
+main .btn1.line {
   width: 350px;
   height: 8px;
   padding: 0;
   background-color: #646bbc;
   border-radius: 0;
+}
+
+main .btn2 {
+  display: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .btn2 .tick {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+main .btn2 .tick::after, main .btn2 .tick::before {
+  content: '';
+  position: absolute;
+  background-color: #16bf78;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  width: 5px;
+}
+
+main .btn2 .tick::before {
+  height: 14px;
+  bottom: 9%;
+  left: 10%;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+main .btn2 .tick::after {
+  height: 30px;
+  top: -16%;
+  left: 0px;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 /*# sourceMappingURL=style.css.map */

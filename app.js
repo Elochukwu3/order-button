@@ -1,36 +1,48 @@
-const btn = document.querySelector("button");
+const btn = document.querySelector(".btn1");
+const btnClose = document.querySelector(".btn2");
 const section = document.querySelector("section");
 const box = document.querySelector(".box");
 const car = document.querySelector(".car-cont");
 // let  progressDiv = document.querySelector(".line-nner");
 
-btn.addEventListener("click", ()=>{
-    section.style.display = "flex";
-    btn.textContent= ""
-    btn.classList.add("line");
-    const progressDiv = document.createElement("div");
-    progressDiv.classList.add("line-inner")
-    btn.appendChild(progressDiv)
+btn.addEventListener("click", () => {
+  section.style.display = "flex";
+  btn.textContent = "";
+  btn.classList.add("line");
+  const progressDiv = document.createElement("div");
+  progressDiv.classList.add("line-inner");
+  btn.appendChild(progressDiv);
 
-    setTimeout(() => {   
-        box.classList.add("in")
-        car.style.animationName = 'move';
-        progress()
-    }, 50);
-   
-    
-    function progress() {
-        let progressValue = 0;
-        let interval = setInterval(moving, 15)
 
-        function moving() {
-            if (progressValue>= 100) {
-                clearInterval(interval)
-            } else {
-                progressValue += 1;
-                progressDiv.style.width = `${progressValue}%`;
-            }
-        }
+  setTimeout(() => {
+    box.classList.add("in");
+    car.style.animationName = "move";
+  }, 50);
+
+  let progressValue = 0;
+  let interval = setInterval(moving, 100);
+
+  
+  // progress()
+  setTimeout(() => {
+    clearInterval(interval); // Clear the interval after 7 seconds
+    // Add your code to hide the section, show btnClose, etc.
+    section.style.display = "none";
+    btnClose.style.display = "flex";
+    btn.style.display = "none";
+  }, 100);
+
+  function moving() {
+    if (progressValue >= 100) {
+      clearInterval(interval);
+      // alert("full")
+      // section.style.display = "none";
+      // btnClose.style.display= "flex"
+      // btn.style.display="none"
+    } else {
+      progressValue += 10;
+      progressDiv.style.width = `${progressValue}%`;
     }
-    
-})
+    console.log(progressValue);
+  }
+});
