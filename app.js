@@ -3,7 +3,6 @@ const btnClose = document.querySelector(".btn2-cont");
 const section = document.querySelector("section");
 const box = document.querySelector(".box");
 const car = document.querySelector(".car-cont");
-// let  progressDiv = document.querySelector(".line-nner");
 
 btn.addEventListener("click", () => {
   section.style.display = "flex";
