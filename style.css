@@ -63,16 +63,16 @@ main section .container .car-cont {
             transform: translateX(0px);
   }
   50% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
   }
   75% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(190px);
-            transform: translateX(190px);
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
   }
 }
 
@@ -86,16 +86,16 @@ main section .container .car-cont {
             transform: translateX(0px);
   }
   50% {
-    -webkit-transform: translateX(50px);
-            transform: translateX(50px);
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
   }
   75% {
     -webkit-transform: translateX(0);
             transform: translateX(0);
   }
   100% {
-    -webkit-transform: translateX(190px);
-            transform: translateX(190px);
+    -webkit-transform: translateX(350px);
+            transform: translateX(350px);
   }
 }
 
@@ -343,8 +343,20 @@ main .btn1.line {
   border-radius: 0;
 }
 
-main .btn2 {
+main .btn2-cont {
   display: none;
+}
+
+main .btn2-cont p {
+  text-align: center;
+  color: gainsboro;
+  font-weight: 800;
+}
+
+main .btn2-cont .btn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -352,15 +364,15 @@ main .btn2 {
           align-items: center;
 }
 
-main .btn2 .tick {
+main .btn2-cont .btn2 .tick {
   display: block;
   width: 30px;
   height: 30px;
   position: relative;
 }
 
-main .btn2 .tick::after, main .btn2 .tick::before {
-  content: '';
+main .btn2-cont .btn2 .tick::after, main .btn2-cont .btn2 .tick::before {
+  content: "";
   position: absolute;
   background-color: #16bf78;
   -webkit-transition: all 0.3s ease;
@@ -368,7 +380,7 @@ main .btn2 .tick::after, main .btn2 .tick::before {
   width: 5px;
 }
 
-main .btn2 .tick::before {
+main .btn2-cont .btn2 .tick::before {
   height: 14px;
   bottom: 9%;
   left: 10%;
@@ -378,7 +390,7 @@ main .btn2 .tick::before {
           transform: rotate(-45deg);
 }
 
-main .btn2 .tick::after {
+main .btn2-cont .btn2 .tick::after {
   height: 30px;
   top: -16%;
   left: 0px;
