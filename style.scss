@@ -3,6 +3,10 @@
     @content;
   }
 }
+*{
+    padding: 0;
+    margin: 0;
+}
 main {
   min-height: 100vh;
   background: grey;
@@ -168,7 +172,6 @@ main {
           height: 50px;
           background-color: #a6accd;
           border-radius: 0px 10px 0 0;
-          // margin-left: auto;
           position: relative;
           .tire {
             z-index: 40;
@@ -176,8 +179,8 @@ main {
           }
           p {
             position: absolute;
-            top: -10px;
-            z-index: 30;
+            top: 3px;
+            z-index: 40;
             right: 0;
             height: 0;
             width: 10px;
@@ -217,7 +220,6 @@ main {
             right: -20px;
             border-radius: 0px 15px 0 0px;
             z-index: 10;
-            // position: relative;
             &::before {
               content: "";
               width: 4px;
@@ -274,6 +276,9 @@ main {
     padding: 0;
     background-color: #646bbc;
     border-radius: 0;
+    @include tablet() {
+        width: 100%;
+      }
   }
   .btn2-cont{
     display: none;
@@ -291,10 +296,7 @@ main {
           display: block;
           width: 30px;
           height: 30px;
-          // border:  2px solid red;
-          // border-radius: 50%;
           position: relative;
-          // background-color: green;
           &::after,
           &::before {
             content: "";
